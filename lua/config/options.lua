@@ -8,5 +8,5 @@ vim.opt.tabstop = 2
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
