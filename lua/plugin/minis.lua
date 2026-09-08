@@ -5,6 +5,7 @@ vim.pack.add({
 -- Explorer
 require('mini.files').setup()
 require('mini.pick').setup()
+require('mini.completion').setup()
 
 -- Buffer
 require('mini.tabline').setup()

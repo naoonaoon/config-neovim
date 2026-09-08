@@ -3,6 +3,7 @@ vim.g.maplocalleader = ' '
 
 require('plugin.colorschemes')
 require('plugin.minis')
+require('plugin.lsp')
 require('plugin.terminals')
 
 require('config.options')
