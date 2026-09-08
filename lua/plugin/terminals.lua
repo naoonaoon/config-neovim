@@ -3,7 +3,18 @@ vim.pack.add({
 })
 
 require('toggleterm').setup({
+  -- for general case
+  direction = 'horizontal',
+  size = function(term)
+    if term.direction == 'horizontal' then
+      return math.floor(vim.o.lines / 3)
+    end
+    return 20
+  end,
+
   close_on_exit = true,
+
+  -- for lazygit
   float_opts = {
     border = 'rounded',
   },

@@ -11,6 +11,11 @@ vim.keymap.set('n', '<leader>bd', function()
   MiniBufremove.delete()
 end, { desc = 'Close Down Buffer' }) 
 
+-- Terminal
+vim.keymap.set('n', '<leader>t', '<cmd>ToggleTerm<cr>', {
+  desc = 'Open Terminal'
+})
+
 -- Git
 vim.keymap.set('n', '<leader>gg', '<cmd>Lazygit<cr>', {
   desc = 'Open Lazygit'
