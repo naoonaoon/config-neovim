@@ -11,7 +11,7 @@
 - ripgrep
 
 ```bash
-brew install neovim lazygit ripgrep
+brew install neovim lazygit ripgrep tree-sitter-cli
 ```
 
 ### 導入方法
