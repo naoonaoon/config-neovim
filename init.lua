@@ -4,6 +4,7 @@ vim.g.maplocalleader = " "
 require("plugin.colorscheme")
 require("plugin.mini")
 require("plugin.lsp")
+require("plugin.treesitter")
 require("plugin.format")
 require("plugin.terminal")
 

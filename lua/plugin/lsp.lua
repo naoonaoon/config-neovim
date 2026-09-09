@@ -5,6 +5,12 @@ vim.pack.add({
 })
 
 require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = {
+		"lua_ls",
+		"elixir-ls",
+	},
+})
 
 vim.lsp.config("lua_ls", {
 	settings = {
@@ -13,11 +19,5 @@ vim.lsp.config("lua_ls", {
 				globals = { "vim" },
 			},
 		},
-	},
-})
-
-require("mason-lspconfig").setup({
-	ensure_installed = {
-		"lua_ls",
 	},
 })
