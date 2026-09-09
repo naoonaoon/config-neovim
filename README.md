@@ -30,6 +30,21 @@ rm -rf ~/.config/nvim/.git
 nvim
 ```
 
+### キーマップ
+
+#### ノーマル
+
+|キー|動作|
+|---|---|
+|<leader>e|エクスプローラーを開く|
+|<leader>sf|ファイルを曖昧検索する|
+|<leader>bd|ファイルタブを閉じる|
+|H|左のタブへ移動する|
+|L|右のタブへ移動する|
+|<leader>rn|変数・関数名をリネームする|
+|<leader>ft|エディタ内でターミナルを開く|
+|<leadeer>gg|Git操作を行う|
+
 ### 構成とヒント
 
 ```
@@ -44,7 +59,8 @@ nvim
 │       ├── format.lua      # フォーマッターの設定
 │       ├── lsp.lua         # LSPの設定
 │       ├── mini.lua        # 汎用的な`mini.nvim`の設定
-│       └── terminal.lua    # neovimでのフローティングターミナルの設定
+│       ├── terminal.lua    # neovimでのフローティングターミナルの設定
+│       └── treesitter.lua  # 構文解析・シンタックスハイライトの設定
 ├── nvim-pack-lock.json
 └── README.md
 ```
