@@ -9,6 +9,7 @@
 - neovim 0.12
 - lazygit
 - ripgrep
+- tree sitter cli
 
 ```bash
 brew install neovim lazygit ripgrep tree-sitter-cli

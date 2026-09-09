@@ -1,11 +1,11 @@
 -- Explorer
 vim.keymap.set("n", "<leader>e", function()
   MiniFiles.open()
-end, { desc = "File Explorer" })
+end, { desc = "Explorer" })
 
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "<leader>sf", function()
   MiniPick.builtin.files()
-end, { desc = "File Reference" })
+end, { desc = "Search File" })
 
 -- Buffer
 vim.keymap.set("n", "<leader>bd", function()
@@ -20,8 +20,12 @@ vim.keymap.set("n", "L", "<cmd>bnext<cr>", {
   desc = "Next Buffer",
 })
 
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
+  desc = "Rename Valiable or Function",
+})
+
 -- Terminal
-vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", {
+vim.keymap.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", {
   desc = "Open Terminal",
 })
 
