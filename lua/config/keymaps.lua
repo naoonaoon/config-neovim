@@ -1,35 +1,22 @@
--- Explorer
+-- explorer
 vim.keymap.set("n", "<leader>e", function()
   MiniFiles.open()
-end, { desc = "Explorer" })
+end, { desc = "Open explorer" })
 
-vim.keymap.set("n", "<leader>sf", function()
-  MiniPick.builtin.files()
-end, { desc = "Search File" })
-
--- Buffer
+-- buffer
 vim.keymap.set("n", "<leader>bd", function()
   MiniBufremove.delete()
-end, { desc = "Close Down Buffer" })
+end, { desc = "Close flie tab" })
 
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>", {
-  desc = "Previous Buffer",
+  desc = "Move previous file tab",
 })
 
 vim.keymap.set("n", "L", "<cmd>bnext<cr>", {
-  desc = "Next Buffer",
+  desc = "Move next file tab",
 })
 
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {
-  desc = "Rename Valiable or Function",
-})
-
--- Terminal
-vim.keymap.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", {
-  desc = "Open Terminal",
-})
-
--- Git
+-- git
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", {
   desc = "Open Lazygit",
 })
