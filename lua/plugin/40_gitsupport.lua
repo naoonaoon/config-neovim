@@ -1,0 +1,7 @@
+vim.pack.add({
+  { src = "https://github.com/nvim-lua/plenary.nvim" },
+  { src = "https://github.com/kdheepak/lazygit.nvim" },
+})
+
+-- diff line
+require("mini.diff").setup()

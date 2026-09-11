@@ -30,6 +30,6 @@ vim.keymap.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", {
 })
 
 -- Git
-vim.keymap.set("n", "<leader>gg", "<cmd>Lazygit<cr>", {
+vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", {
   desc = "Open Lazygit",
 })

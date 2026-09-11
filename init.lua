@@ -1,12 +1,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-require("plugin.colorscheme")
-require("plugin.mini")
-require("plugin.lsp")
-require("plugin.treesitter")
-require("plugin.format")
-require("plugin.terminal")
+require("plugin.00_minipacks")
+require("plugin.10_interface")
+require("plugin.20_editor")
+require("plugin.30_languages")
+require("plugin.40_gitsupport")
 
 require("config.options")
 require("config.keymaps")
