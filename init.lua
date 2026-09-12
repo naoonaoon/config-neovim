@@ -6,6 +6,7 @@ require("plugin.10_interface")
 require("plugin.20_editor")
 require("plugin.30_languages")
 require("plugin.40_gitsupport")
+require("plugin.50_utils")
 
 require("config.options")
 require("config.keymaps")
