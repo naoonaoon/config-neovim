@@ -1,5 +1,6 @@
 vim.pack.add({
   { src = "https://github.com/rmehri01/onenord.nvim" },
+  { src = "https://github.com/stevearc/oil.nvim" },
 })
 
 -- theme
@@ -10,6 +11,11 @@ require("mini.icons").setup()
 
 -- explorer
 require("mini.files").setup()
+require("oil").setup({
+  keymaps = {
+    ["q"] = "actions.close",
+  },
+})
 
 -- file tab
 require("mini.tabline").setup()
