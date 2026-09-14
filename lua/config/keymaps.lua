@@ -21,6 +21,7 @@ vim.keymap.set({ "n", "x", "o" }, "s", function()
   require("flash").jump()
 end, { desc = "Jump to some words" })
 
+-- search
 vim.keymap.set("n", "<leader>sf", function()
   require("telescope.builtin").find_files()
 end, { desc = "Serch some files by file name" })
@@ -29,6 +30,7 @@ vim.keymap.set("n", "<leader>sg", function()
   require("telescope.builtin").live_grep()
 end, { desc = "Serch some files by text" })
 
+-- information
 vim.keymap.set("n", "<leader>d", function()
   vim.diagnostic.open_float()
 end, { desc = "Show diagnostic" })

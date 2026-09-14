@@ -2,6 +2,8 @@ vim.pack.add({
   { src = "https://github.com/stevearc/conform.nvim" },
 })
 
+-- if you wanna support formatting for more languages,
+-- add them here
 local formatters = {
   lua = { "stylua" },
   elixir = { "mix" },
@@ -22,4 +24,9 @@ vim.schedule(function()
       lsp_format = "fallback",
     },
   })
+
+  -- readability
+  require("mini.cursorword").setup()
+  require("mini.indentscope").setup()
+  require("mini.trailspace").setup()
 end)

@@ -1,3 +1,4 @@
+-- install user interface packages
 vim.pack.add({
   { src = "https://github.com/rmehri01/onenord.nvim" },
 })
@@ -17,10 +18,3 @@ require("mini.bufremove").setup()
 
 -- status line
 require("mini.statusline").setup()
-
--- readability
-vim.schedule(function()
-  require("mini.cursorword").setup()
-  require("mini.indentscope").setup()
-  require("mini.trailspace").setup()
-end)
