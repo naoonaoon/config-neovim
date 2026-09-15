@@ -3,6 +3,8 @@ vim.pack.add({
     { src = "https://github.com/rmehri01/onenord.nvim" },
     { src = "https://github.com/FylerOrg/Fyler.nvim" },
     { src = "https://github.com/nvim-lualine/lualine.nvim" },
+    { src = "https://github.com/folke/todo-comments.nvim" },
+    { src = "https://github.com/nvim-mini/mini.nvim" },
 })
 
 -- Theme
@@ -36,8 +38,8 @@ require("lualine").setup({
 
 -- Editor Support
 require("mini.pairs").setup()
-require("mini.hipatterns").setup()
 require("mini.diff").setup()
 
 -- Readability
 require("mini.indentscope").setup()
+require("todo-comments").setup()

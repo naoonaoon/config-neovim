@@ -1,7 +1,6 @@
 vim.pack.add({
     { src = "https://github.com/nvim-mini/mini.nvim" },
 })
-require("plugin.20_editor")
 require("plugin.40_gitsupport")
 require("plugin.50_utils")
 

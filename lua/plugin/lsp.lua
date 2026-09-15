@@ -3,6 +3,8 @@ vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+    { src = "https://github.com/stevearc/conform.nvim" },
+    { src = "https://github.com/nvim-mini/mini.nvim" },
 })
 
 -- NOTE: Check LSP By `:Mason`
@@ -23,13 +25,19 @@ local file_types = {
     "elixir",
 }
 
+-- NOTE: Check Formatter By `:ConformInfo`
+local formatters = {
+    lua = { "stylua" },
+    elixir = { "mix" },
+}
+
 -- LSP Manager
 require("mason").setup()
 
 -- Enable LSP
 vim.lsp.enable(language_servers)
 
--- TreeSitter
+-- Tree-Sitter
 require("nvim-treesitter").install(parsers)
 vim.api.nvim_create_autocmd("FileType", {
     pattern = file_types,
@@ -37,3 +45,15 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.treesitter.start()
     end,
 })
+
+-- Formatter
+require("conform").setup({
+    formatters_by_ft = formatters,
+    format_on_save = {
+        timeout_ms = 1000,
+        lsp_format = "fallback",
+    },
+})
+
+-- Completion
+require("mini.completion")
