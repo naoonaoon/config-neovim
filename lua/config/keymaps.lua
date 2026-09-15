@@ -1,11 +1,11 @@
--- leader
+-- Leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- explorer
+-- Explorer
 vim.keymap.set("n", "<leader>e", function()
-    MiniFiles.open()
-end, { desc = "Open explorer by mini.files" })
+    require("fyler").open()
+end, { desc = "Open explorer" })
 
 -- file tab
 vim.keymap.set("n", "<leader>bd", function()

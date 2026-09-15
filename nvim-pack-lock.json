@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "Fyler.nvim": {
+      "rev": "4555d8d6c82d0105c664f815b465e9384c500470",
+      "src": "https://github.com/FylerOrg/Fyler.nvim"
+    },
     "conform.nvim": {
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
@@ -15,6 +19,10 @@
     "lazygit.nvim": {
       "rev": "a04ad0dbc725134edbee3a5eea29290976695357",
       "src": "https://github.com/kdheepak/lazygit.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "221ce6b2d999187044529f49da6554a92f740a96",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "5d32a9b8de9f90466797a740edb0fb4b3c27e423",

@@ -1,25 +1,26 @@
--- line number
+-- Line Number
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- readability
+-- Readability
 vim.opt.scrolloff = 10
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 
--- tab
+-- Tab
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
 
--- search
+-- Search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 
--- os
+-- Utils
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
+vim.opt.cmdheight = 0
 
--- backup
+-- Backup
 vim.opt.swapfile = false
