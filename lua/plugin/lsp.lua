@@ -56,4 +56,4 @@ require("conform").setup({
 })
 
 -- Completion
-require("mini.completion")
+require("mini.completion").setup()

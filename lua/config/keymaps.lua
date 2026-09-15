@@ -5,41 +5,41 @@ vim.g.maplocalleader = " "
 -- Explorer
 vim.keymap.set("n", "<leader>e", function()
     require("fyler").open()
-end, { desc = "Open explorer" })
+end, { desc = "Open Explorer" })
 
--- file tab
+-- Buffer
 vim.keymap.set("n", "<leader>bd", function()
-    MiniBufremove.delete()
-end, { desc = "Close flie tab" })
+    require("mini.bufremove").delete()
+end, { desc = "Close Buffer" })
 
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>", {
-    desc = "Move previous file tab",
+    desc = "Previous Buffer",
 })
 
 vim.keymap.set("n", "L", "<cmd>bnext<cr>", {
-    desc = "Move next file tab",
+    desc = "Next Buffer",
 })
 
--- file
+-- Jump
 vim.keymap.set({ "n", "x", "o" }, "s", function()
     require("flash").jump()
-end, { desc = "Jump to some words" })
+end, { desc = "Jump To Word" })
 
--- search
+-- Search
 vim.keymap.set("n", "<leader>sf", function()
     require("telescope.builtin").find_files()
-end, { desc = "Serch some files by file name" })
+end, { desc = "Search Files By Name" })
 
 vim.keymap.set("n", "<leader>sg", function()
     require("telescope.builtin").live_grep()
-end, { desc = "Serch some files by text" })
+end, { desc = "Search File By Content" })
 
 -- information
 vim.keymap.set("n", "<leader>d", function()
     vim.diagnostic.open_float()
-end, { desc = "Show diagnostic" })
+end, { desc = "Show Diagnostic Details" })
 
 -- git
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", {
-    desc = "Open lazygit",
+    desc = "Open Lazygit",
 })
