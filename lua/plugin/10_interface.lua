@@ -1,6 +1,6 @@
 -- install user interface packages
 vim.pack.add({
-  { src = "https://github.com/rmehri01/onenord.nvim" },
+    { src = "https://github.com/rmehri01/onenord.nvim" },
 })
 
 -- theme

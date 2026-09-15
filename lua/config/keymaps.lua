@@ -1,41 +1,41 @@
 -- explorer
 vim.keymap.set("n", "<leader>e", function()
-  MiniFiles.open()
+    MiniFiles.open()
 end, { desc = "Open explorer by mini.files" })
 
 -- file tab
 vim.keymap.set("n", "<leader>bd", function()
-  MiniBufremove.delete()
+    MiniBufremove.delete()
 end, { desc = "Close flie tab" })
 
 vim.keymap.set("n", "H", "<cmd>bprevious<cr>", {
-  desc = "Move previous file tab",
+    desc = "Move previous file tab",
 })
 
 vim.keymap.set("n", "L", "<cmd>bnext<cr>", {
-  desc = "Move next file tab",
+    desc = "Move next file tab",
 })
 
 -- file
 vim.keymap.set({ "n", "x", "o" }, "s", function()
-  require("flash").jump()
+    require("flash").jump()
 end, { desc = "Jump to some words" })
 
 -- search
 vim.keymap.set("n", "<leader>sf", function()
-  require("telescope.builtin").find_files()
+    require("telescope.builtin").find_files()
 end, { desc = "Serch some files by file name" })
 
 vim.keymap.set("n", "<leader>sg", function()
-  require("telescope.builtin").live_grep()
+    require("telescope.builtin").live_grep()
 end, { desc = "Serch some files by text" })
 
 -- information
 vim.keymap.set("n", "<leader>d", function()
-  vim.diagnostic.open_float()
+    vim.diagnostic.open_float()
 end, { desc = "Show diagnostic" })
 
 -- git
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", {
-  desc = "Open lazygit",
+    desc = "Open lazygit",
 })

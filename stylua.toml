@@ -1,6 +1,6 @@
--- indent
+# indent
 indent_type = "Spaces"
 indent_width = 4
 
--- width
-column_width = 80
+# width
+column_width = 100
