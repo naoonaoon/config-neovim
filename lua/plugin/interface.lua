@@ -12,26 +12,32 @@ vim.cmd([[colorscheme onenord]])
 require("mini.icons").setup()
 MiniIcons.mock_nvim_web_devicons()
 
-vim.schedule(function()
-    -- Explorer
-    require("fyler").setup({
-        kind = "floating",
-        integrations = { icon = "mini_icons" },
-    })
+-- Explorer
+require("fyler").setup({
+    kind = "floating",
+    integrations = { icon = "mini_icons" },
+})
 
-    -- Tab Line
-    require("mini.tabline").setup()
-    require("mini.bufremove").setup()
+-- Tab Line
+require("mini.tabline").setup()
+require("mini.bufremove").setup()
 
-    -- Status Line
-    require("lualine").setup({
-        sections = {
-            lualine_a = { "mode" },
-            lualine_b = { "branch" },
-            lualine_c = { "filename" },
-            lualine_x = {},
-            lualine_y = { "filetype" },
-            lualine_z = { "%l:%L" },
-        },
-    })
-end)
+-- Status Line
+require("lualine").setup({
+    sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch" },
+        lualine_c = { "filename" },
+        lualine_x = {},
+        lualine_y = { "filetype" },
+        lualine_z = { "%l:%L" },
+    },
+})
+
+-- Editor Support
+require("mini.pairs").setup()
+require("mini.hipatterns").setup()
+require("mini.diff").setup()
+
+-- Readability
+require("mini.indentscope").setup()

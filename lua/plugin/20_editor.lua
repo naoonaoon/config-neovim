@@ -10,9 +10,6 @@ local formatters = {
 }
 
 vim.schedule(function()
-    -- pairethness
-    require("mini.pairs").setup()
-
     -- completion
     require("mini.completion").setup()
 
@@ -24,9 +21,4 @@ vim.schedule(function()
             lsp_format = "fallback",
         },
     })
-
-    -- readability
-    require("mini.cursorword").setup()
-    require("mini.indentscope").setup()
-    require("mini.trailspace").setup()
 end)
