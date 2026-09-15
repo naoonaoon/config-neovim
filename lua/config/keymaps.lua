@@ -1,3 +1,7 @@
+-- leader
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- explorer
 vim.keymap.set("n", "<leader>e", function()
     MiniFiles.open()
