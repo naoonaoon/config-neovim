@@ -12,7 +12,7 @@ vim.cmd([[colorscheme onenord]])
 
 -- Icon
 require("mini.icons").setup()
-MiniIcons.mock_nvim_web_devicons()
+require("mini.icons").mock_nvim_web_devicons()
 
 -- Explorer
 require("fyler").setup({

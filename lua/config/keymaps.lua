@@ -20,6 +20,10 @@ vim.keymap.set("n", "L", "<cmd>bnext<cr>", {
     desc = "Next Buffer",
 })
 
+vim.keymap.set("n", "<leader>zz", "<cmd>ZenMode<cr>", {
+    desc = "Welcome to Zen World",
+})
+
 -- Jump
 vim.keymap.set({ "n", "x", "o" }, "s", function()
     require("flash").jump()

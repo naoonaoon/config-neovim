@@ -4,7 +4,11 @@ vim.pack.add({
     { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
     { src = "https://github.com/folke/flash.nvim" },
+    { src = "https://github.com/folke/zen-mode.nvim" },
 })
+
+-- Zne Mode
+require("zen-mode").setup()
 
 -- Render Markdown
 require("render-markdown").setup({
