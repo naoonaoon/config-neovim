@@ -1,66 +1,68 @@
-### コンセプト
+# padawan.nvim
 
-**シンプルさ**
-- プラグインは`mini.nvim`をベースに最小限のものを利用する
-- できるだけ設定を抽象化しない
+### Concept
 
-### 前提条件
+**Simplicity**
+- Use a minimal set of plugins based on `mini.nvim`
+- Avoid abstracting the configuration as much as possible
 
-- neovim 0.12
+### Requirements
+
+- Neovim 0.12
 - lazygit
 - ripgrep
-- tree sitter cli
+- Tree-sitter CLI
 
 ```bash
 brew install neovim lazygit ripgrep tree-sitter-cli
 ```
 
-### 導入方法
+### Installation
 
-- 設定ファイルを`~/.config/nvim`に配置します
+- Place the configuration files in `~/.config/nvim`
 
 ```bash
-git clone https://github.com/naoonaoon/config-neovim.git ~/.config/nvim
+git clone https://github.com/naoonaoon/padawan.nvim.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-- neovimを起動する
+- Launch Neovim
 
 ```bash
 nvim
 ```
 
-### キーマップ
+### Keymaps
 
-#### ノーマル
+#### Normal Mode
 
-|キー|動作|
+|Key|Action|
 |---|---|
-|`<leader>`e|エクスプローラーを開く|
-|`<leader>`sf|ファイルを曖昧検索する|
-|`<leader>`bd|ファイルタブを閉じる|
-|H|左のタブへ移動する|
-|L|右のタブへ移動する|
-|`<leader>`rn|変数・関数名をリネームする|
-|`<leader>`ft|エディタ内でターミナルを開く|
-|`<leader>`gg|Git操作を行う|
+|`<leader>`e|Open the explorer|
+|`<leader>`sf|Fuzzy-find files|
+|`<leader>`sg|Search file contents|
+|`<leader>`bd|Close the buffer|
+|H|Move to the previous buffer|
+|L|Move to the next buffer|
+|`<leader>`zz|Start Zen Mode|
+|s|Jump to a word|
+|`<leader>`d|Show diagnostic details|
+|`<leader>`gg|Open Git operations|
 
-### 構成とヒント
+### Structure and Tips
 
 ```
 nvim
 ├── init.lua
 ├── lua
 │   ├── config
-│   │   ├── keymaps.lua     # <leader>で起動する操作設定
-│   │   └── options.lua     # neovimの設定
+│   │   ├── keymaps.lua     # Keymap configuration triggered by <leader>
+│   │   └── options.lua     # Neovim configuration
 │   └── plugin
-│       ├── colorscheme.lua # テーマ設定
-│       ├── format.lua      # フォーマッターの設定
-│       ├── lsp.lua         # LSPの設定
-│       ├── mini.lua        # 汎用的な`mini.nvim`の設定
-│       ├── terminal.lua    # neovimでのフローティングターミナルの設定
-│       └── treesitter.lua  # 構文解析・シンタックスハイライトの設定
+│       ├── interface.lua   # UI configuration
+│       ├── lsp.lua         # Language configuration
+│       └── util.lua        # Utility configuration
 ├── nvim-pack-lock.json
+├── stylua.toml
 └── README.md
 ```
