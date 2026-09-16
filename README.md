@@ -1,67 +1,75 @@
 # padawan.nvim
 
-### Concept
+> A minimal, opinionated Neovim configuration built around `mini.nvim`.
 
-**Simplicity**
-- Use a minimal set of plugins based on `mini.nvim`
-- Avoid abstracting the configuration as much as possible
+Simple by design. Easy to understand. Focused on the editor. For beginners, too.
 
-### Requirements
+## Features
+
+- A lightweight UI with file explorer, status line, and tab line
+- LSP, Tree-sitter, completion, and format-on-save
+- Fuzzy file and content search
+- Git integration with Lazygit
+- Zen Mode and Markdown rendering
+
+## Requirements
 
 - Neovim 0.12
-- lazygit
-- ripgrep
-- Tree-sitter CLI
+- [lazygit](https://github.com/jesseduffield/lazygit)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [Tree-sitter CLI](https://tree-sitter.github.io/tree-sitter/)
 
 ```bash
 brew install neovim lazygit ripgrep tree-sitter-cli
 ```
 
-### Installation
+## Installation
 
-- Place the configuration files in `~/.config/nvim`
+Clone the repository into your Neovim configuration directory:
 
 ```bash
 git clone https://github.com/naoonaoon/padawan.nvim.git ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 ```
 
-- Launch Neovim
+Then launch Neovim:
 
 ```bash
 nvim
 ```
 
-### Keymaps
+## Keymaps
 
-#### Normal Mode
+The leader key is set to `<Space>`.
 
-|Key|Action|
-|---|---|
-|`<leader>`e|Open the explorer|
-|`<leader>`sf|Fuzzy-find files|
-|`<leader>`sg|Search file contents|
-|`<leader>`bd|Close the buffer|
-|H|Move to the previous buffer|
-|L|Move to the next buffer|
-|`<leader>`zz|Start Zen Mode|
-|s|Jump to a word|
-|`<leader>`d|Show diagnostic details|
-|`<leader>`gg|Open Git operations|
+### Normal Mode
 
-### Structure and Tips
+| Key | Action |
+| --- | --- |
+| `<leader>e` | Open the explorer |
+| `<leader>sf` | Fuzzy-find files |
+| `<leader>sg` | Search file contents |
+| `<leader>bd` | Close the buffer |
+| `H` | Move to the previous buffer |
+| `L` | Move to the next buffer |
+| `<leader>zz` | Start Zen Mode |
+| `s` | Jump to a word |
+| `<leader>d` | Show diagnostic details |
+| `<leader>gg` | Open Lazygit |
 
-```
+## Structure
+
+```text
 nvim
 ├── init.lua
 ├── lua
-│   ├── config
-│   │   ├── keymaps.lua     # Keymap configuration triggered by <leader>
-│   │   └── options.lua     # Neovim configuration
-│   └── plugin
-│       ├── interface.lua   # UI configuration
-│       ├── lsp.lua         # Language configuration
-│       └── util.lua        # Utility configuration
+│   ├── config
+│   │   ├── keymaps.lua     # Keymap configuration
+│   │   └── options.lua      # Neovim options
+│   └── plugin
+│       ├── interface.lua    # UI configuration
+│       ├── lsp.lua          # LSP, Tree-sitter, and formatter configuration
+│       └── util.lua         # Utility plugin configuration
 ├── nvim-pack-lock.json
 ├── stylua.toml
 └── README.md
