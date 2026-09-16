@@ -1,27 +1,18 @@
-<div align="center">
-
 # padawan.nvim
 
 > A minimal, opinionated Neovim configuration built around `mini.nvim`.
 
-```text
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣿⣿⠛⠉⠉⠉⠉⠙⣿⣿⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣿⣿⠀⠶⠀⠀⠶⠀⣿⣿⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠒⠒⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠘⣿⣿⣦⣀⣀⣴⣿⣿⠃⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠈⠛⢿⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⣀⣴⣾⣿⣿⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⣾⣿⣿⠟⠋⠉⠉⠉⠉⠙⠻⣿⣿⣷⠀⠀⠀⠀
-⠀⠀⠀⠀⠙⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠋⠀⠀⠀⠀
-```
+<div align="center">
+<pre>
+  _ __   __ _  __| | __ ___      ____ _ _ __
+ | '_ \ / _` |/ _` |/ _` \ \ /\ / / _` | '_ \
+ | |_) | (_| | (_| | (_| |\ V  V / (_| | | | |
+ | .__/ \__,_|\__,_|\__,_| \_/\_/ \__,_|_| |_|
+ |_|
+</pre>
+</div>
 
 Simple by design. Easy to understand. Focused on the editor. For beginners, too.
-
-</div>
 
 ## Features
 
@@ -83,7 +74,7 @@ nvim
 ├── init.lua
 ├── lua
 │   ├── config
-│   │   ├── keymaps.lua     # Keymap configuration
+│   │   ├── keymaps.lua      # Keymap configuration
 │   │   └── options.lua      # Neovim options
 │   └── plugin
 │       ├── interface.lua    # UI configuration
