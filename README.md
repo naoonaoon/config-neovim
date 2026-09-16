@@ -1,10 +1,8 @@
-<div align="center">
-
 # padawan.nvim
 
 > A minimal, opinionated Neovim configuration built around `mini.nvim`.
 
-<pre align="left" style="display: inline-block; text-align: left;">
+<pre>
   _ __   __ _  __| | __ ___      ____ _ _ __
  | '_ \ / _` |/ _` |/ _` \ \ /\ / / _` | '_ \
  | |_) | (_| | (_| | (_| |\ V  V / (_| | | | |
@@ -13,8 +11,6 @@
 </pre>
 
 Simple by design. Easy to understand. Focused on the editor. For beginners, too.
-
-</div>
 
 ## Features
 
